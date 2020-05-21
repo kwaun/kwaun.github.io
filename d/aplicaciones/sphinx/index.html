@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sphinx &mdash; documentación de Apuntes - 2020.05.21-priv</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Prueba" href="../../prueba/index.html" />
+    <link rel="prev" title="Sphinx ejemplo" href="../sphinx-ejemplo/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Apuntes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.05.21-priv
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Aplicaciones</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-ejemplo/index.html">Sphinx ejemplo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sphinx</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../prueba/index.html">Prueba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todos.html">Por hacer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Apuntes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Aplicaciones</a> &raquo;</li>
+        
+      <li>sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx">
+<h1>sphinx<a class="headerlink" href="#sphinx" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="contents local topic" id="contenido">
+<ul class="simple">
+<li><p><a class="reference internal" href="#instalacion" id="id2">Instalación</a></p></li>
+<li><p><a class="reference internal" href="#archivos-de-configuracion" id="id3">Archivos de configuración</a></p>
+<ul>
+<li><p><a class="reference internal" href="#conf-py" id="id4">conf.py</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ejemplos" id="id5">Ejemplos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tabla" id="id6">tabla</a></p></li>
+<li><p><a class="reference internal" href="#toctree" id="id7">toctree</a></p></li>
+<li><p><a class="reference internal" href="#contents" id="id8">contents</a></p></li>
+<li><p><a class="reference internal" href="#headers" id="id9">headers</a></p></li>
+<li><p><a class="reference internal" href="#literalinclude" id="id10">literalinclude</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="instalacion">
+<h2>Instalación<a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install -U sphinx
+pip3 install -U sphinx_rtd_theme
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart <span class="se">\</span>
+  --sep <span class="se">\</span>
+  --project apuntes <span class="se">\</span>
+  --author <span class="s2">&quot;Jorge P&quot;</span> <span class="se">\</span>
+  -v <span class="m">20</span>.05.21 <span class="se">\</span>
+  --release pub <span class="se">\</span>
+  --language es <span class="se">\</span>
+  --epub <span class="se">\</span>
+  --no-batchfile <span class="se">\</span>
+  --extensions <span class="se">\</span>
+  sphinx.ext.autodoc,<span class="se">\</span>
+  sphinx.ext.todo,<span class="se">\</span>
+  sphinx.ext.ifconfig,<span class="se">\</span>
+  sphinx.ext.imgconverter,<span class="se">\</span>
+  sphinx.ext.graphviz,<span class="se">\</span>
+  sphinx.ext.imgmath,<span class="se">\</span>
+  sphinx.ext.githubpages <span class="se">\</span>
+  apuntes
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> _static
+mkdir css
+<span class="nb">echo</span> &lt; EOF &gt;&gt; css/my_theme.css
+@import url<span class="o">(</span><span class="s2">&quot;theme.css&quot;</span><span class="o">)</span><span class="p">;</span>
+/*
+.wy-nav-content <span class="o">{</span>
+  max-width: <span class="m">90</span>%
+<span class="o">}</span>
+*/
+EOF
+<span class="nb">cd</span> ..
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make html
+make latexpdf
+</pre></div>
+</div>
+</div>
+<div class="section" id="archivos-de-configuracion">
+<h2>Archivos de configuración<a class="headerlink" href="#archivos-de-configuracion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="conf-py">
+<h3>conf.py<a class="headerlink" href="#conf-py" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Lista 1 </span><span class="caption-text">conf.py</span><a class="headerlink" href="#id1" title="Enlace permanente a este código fuente">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configuration file for the Sphinx documentation builder.</span>
+<span class="c1">#</span>
+<span class="c1"># This file only contains a selection of the most common options. For a full</span>
+<span class="c1"># list see the documentation:</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;privado&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;env&#39;</span><span class="p">)</span>
+   
+<span class="n">privado</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># La opcion por defecto falla en el Kindle.</span>
+<span class="c1">#smartquotes = False</span>
+
+
+<span class="c1"># -- Path setup --------------------------------------------------------------</span>
+
+<span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c1"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c1"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c1">#</span>
+<span class="c1"># import os</span>
+<span class="c1"># import sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Apuntes&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Jorge P&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Jorge P&#39;</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y.%m.</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">privado</span><span class="p">:</span>
+  <span class="c1"># The short X.Y version</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">today</span> <span class="o">+</span> <span class="s1">&#39;-priv&#39;</span>
+<span class="k">else</span><span class="p">:</span>   
+    <span class="n">version</span> <span class="o">=</span> <span class="n">today</span> <span class="o">+</span> <span class="s1">&#39;-pub&#39;</span>
+
+<span class="c1"># The full version, including alpha/beta/rc tags</span>
+<span class="n">release</span> <span class="o">=</span> <span class="n">version</span>
+
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.ifconfig&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.imgconverter&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.graphviz&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.imgmath&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.githubpages&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="c1"># The language for content autogenerated by Sphinx. Refer to documentation</span>
+<span class="c1"># for a list of supported languages.</span>
+<span class="c1">#</span>
+<span class="c1"># This is also used if you do content translation via gettext catalogs.</span>
+<span class="c1"># Usually you set &quot;language&quot; from the command line for these cases.</span>
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;es&#39;</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">pygments_style</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">nitpicky</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">numfig</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="c1">#html_theme = &#39;alabaster&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+
+<span class="c1">#html_theme_path = [&quot;_themes&quot;, ]</span>
+<span class="n">html_style</span> <span class="o">=</span> <span class="s1">&#39;css/my_theme.css&#39;</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;prev_next_buttons_location&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s1">&#39;style_external_links&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="c1"># Toc options</span>
+    <span class="s1">&#39;collapse_navigation&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;sticky_navigation&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;navigation_depth&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;includehidden&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;titles_only&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">html_show_sourcelink</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">html_show_sphinx</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">html_show_copyright</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+
+
+<span class="c1"># LaTeX</span>
+
+<span class="c1">#latex_elements = {</span>
+    <span class="c1"># The paper size (&#39;letterpaper&#39; or &#39;a4paper&#39;).</span>
+    <span class="c1">#</span>
+    <span class="c1"># &#39;papersize&#39;: &#39;letterpaper&#39;,</span>
+
+    <span class="c1"># The font size (&#39;10pt&#39;, &#39;11pt&#39; or &#39;12pt&#39;).</span>
+    <span class="c1">#</span>
+    <span class="c1"># &#39;pointsize&#39;: &#39;10pt&#39;,</span>
+
+    <span class="c1"># Additional stuff for the LaTeX preamble.</span>
+    <span class="c1">#</span>
+    <span class="c1"># &#39;preamble&#39;: &#39;&#39;,</span>
+
+    <span class="c1"># Latex figure (float) alignment</span>
+    <span class="c1">#</span>
+    <span class="c1"># &#39;figure_align&#39;: &#39;htbp&#39;,</span>
+
+    <span class="c1">#&#39;papersize&#39;: &#39;a4paper&#39;,</span>
+    <span class="c1">#&#39;preamble&#39;: r&#39;&#39;&#39;</span>
+        <span class="c1">#\setcounter{tocdepth}{3}</span>
+        <span class="c1">#\usepackage{charter}</span>
+        <span class="c1">#\usepackage[defaultsans]{lato}</span>
+        <span class="c1">#\usepackage{inconsolata}   </span>
+    <span class="c1">#&#39;&#39;&#39;,</span>
+    <span class="c1">#&#39;fncychap&#39;: &#39;\\usepackage[Bjornstrup]{fncychap}&#39;,</span>
+    <span class="c1">#&#39;sphinxsetup&#39;: &#39;verbatimwithframe=false, VerbatimColor={rgb}{0.97,0.97,0.97}&#39;,</span>
+    <span class="c1">#&#39;sphinxsetup&#39;: &#39;hmargin={0.5in}, vmargin={1in}, marginpar=0in&#39;</span>
+
+<span class="c1">#}</span>
+
+
+<span class="c1"># PANTALLA MOVIL. LETRA GRANDE SIN MARGENES.</span>
+<span class="n">latex_elements_movil</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;papersize&#39;</span><span class="p">:</span> <span class="s1">&#39;a4paper&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pointsize&#39;</span><span class="p">:</span> <span class="s1">&#39;12pt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        \setcounter</span><span class="si">{tocdepth}{3}</span><span class="s1"></span>
+<span class="s1">        \usepackage</span><span class="si">{charter}</span><span class="s1"></span>
+<span class="s1">        \usepackage[defaultsans]</span><span class="si">{lato}</span><span class="s1"></span>
+<span class="s1">        \usepackage</span><span class="si">{inconsolata}</span><span class="s1">   </span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;fncychap&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">usepackage[Bjornstrup]</span><span class="si">{fncychap}</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinxsetup&#39;</span><span class="p">:</span> <span class="s1">&#39;hmargin=</span><span class="si">{0.2in}</span><span class="s1">, vmargin=</span><span class="si">{0.7in}</span><span class="s1">, marginpar=0in, shadowsize=0pt, VerbatimBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.9,0.9,0.9}&#39;</span>
+<span class="p">}</span>
+
+
+<span class="c1"># PANTALLA ORDENADOR E IPAD. LETRA GRANDE CON MARGENES PEQUENYOS.</span>
+<span class="n">latex_elements_ordenador</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;papersize&#39;</span><span class="p">:</span> <span class="s1">&#39;a4paper&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pointsize&#39;</span><span class="p">:</span> <span class="s1">&#39;12pt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        \setcounter</span><span class="si">{tocdepth}{3}</span><span class="s1"></span>
+<span class="s1">        \usepackage</span><span class="si">{charter}</span><span class="s1"></span>
+<span class="s1">        \usepackage[default]</span><span class="si">{lato}</span><span class="s1"></span>
+<span class="s1">        \usepackage</span><span class="si">{inconsolata}</span><span class="s1">   </span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;fncychap&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">usepackage[Bjornstrup]</span><span class="si">{fncychap}</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinxsetup&#39;</span><span class="p">:</span> <span class="s1">&#39;hmargin=</span><span class="si">{0.5in}</span><span class="s1">, vmargin=</span><span class="si">{1.0in}</span><span class="s1">, marginpar=0in, shadowsize=0pt, VerbatimBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.9,0.9,0.9}&#39;</span>
+<span class="p">}</span>
+
+
+<span class="c1"># IMPRESION. LETRA PEQUENYA CON MARGENES NORMALES Y ASIMETRICOS.</span>
+<span class="n">latex_elements_impresion</span> <span class="o">=</span> <span class="p">{</span>
+<span class="c1">#latex_elements = {</span>
+    <span class="s1">&#39;papersize&#39;</span><span class="p">:</span> <span class="s1">&#39;a4paper&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;preamble&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        \setcounter</span><span class="si">{tocdepth}{3}</span><span class="s1"></span>
+<span class="s1">        \usepackage</span><span class="si">{charter}</span><span class="s1"></span>
+<span class="s1">        \usepackage[defaultsans]</span><span class="si">{lato}</span><span class="s1"></span>
+<span class="s1">        \usepackage</span><span class="si">{inconsolata}</span><span class="s1">   </span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;fncychap&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">usepackage[Bjornstrup]</span><span class="si">{fncychap}</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinxsetup&#39;</span><span class="p">:</span> <span class="s1">&#39;hmargin={0.8in,0.5in}, vmargin=</span><span class="si">{1in}</span><span class="s1">, marginpar=0in, shadowsize=0pt, VerbatimBorderColor=</span><span class="si">{rgb}</span><span class="s1">{0.9,0.9,0.9}&#39;</span>
+<span class="p">}</span>
+
+<span class="n">latex_elements</span> <span class="o">=</span> <span class="n">latex_elements_ordenador</span>
+
+<span class="c1">#latex_documents = [</span>
+    <span class="c1">#(master_doc, &#39;apuntes.tex&#39;, u&#39;apuntes&#39;,</span>
+     <span class="c1">#u&#39;Jorge P&#39;, &#39;manual&#39;),</span>
+<span class="c1">#]</span>
+
+<span class="n">latex_use_parts</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">latex_show_pagerefs</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">latex_show_urls</span> <span class="o">=</span> <span class="s1">&#39;footnote&#39;</span>
+
+
+<span class="c1"># -- Extension configuration -------------------------------------------------</span>
+
+<span class="c1"># -- Options for todo extension ----------------------------------------------</span>
+
+<span class="c1"># If true, `todo` and `todoList` produce output, else they produce nothing.</span>
+<span class="n">todo_include_todos</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<p><a class="reference download internal" download="" href="../../../_downloads/f6f278f4f1aeacbaad85e4a2eb0ce643/conf.py"><code class="xref download docutils literal notranslate"><span class="pre">conf.py</span></code></a>.</p>
+</div>
+</div>
+<div class="section" id="ejemplos">
+<h2>Ejemplos<a class="headerlink" href="#ejemplos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="tabla">
+<h3>tabla<a class="headerlink" href="#tabla" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>========   =======   ==========
+Sistema    Usuario   Contraseña
+========   =======   ==========
+raspbian   pi        raspberry
+RT-AC68U   admin     admin
+========   =======   ==========
+</pre></div>
+</div>
+</div>
+<div class="section" id="toctree">
+<h3>toctree<a class="headerlink" href="#toctree" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:titlesonly:</span>
+   <span class="nc">:glob:</span>
+   <span class="nc">:maxdepth:</span> 3
+
+   */index
+</pre></div>
+</div>
+</div>
+<div class="section" id="contents">
+<h3>contents<a class="headerlink" href="#contents" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+   <span class="nc">:local:</span>
+   <span class="nc">:backlinks:</span> none
+</pre></div>
+</div>
+</div>
+<div class="section" id="headers">
+<h3>headers<a class="headerlink" href="#headers" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Primero</span>
+<span class="gh">=======</span>
+
+<span class="gh">Segundo</span>
+<span class="gh">-------</span>
+
+<span class="gh">Tercero</span>
+<span class="gh">~~~~~~~</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="literalinclude">
+<h3>literalinclude<a class="headerlink" href="#literalinclude" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> files/conf.py
+   <span class="nc">:diff:</span> files/conf.py.orig
+   <span class="nc">:caption:</span> conf.py
+
+<span class="p">..</span> <span class="ow">only</span><span class="p">::</span> builder_html
+
+   <span class="na">:download:</span><span class="nv">`conf.py &lt;files/conf.py&gt;`</span>.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
